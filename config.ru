@@ -1,5 +1,2 @@
-require 'sinatra/base'
-require './Main'
-
-
-run Main
+require './app'
+run Sinatra::Application

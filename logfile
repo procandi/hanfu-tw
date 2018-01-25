@@ -1,0 +1,93 @@
+2018-01-25 13:56:25.248 CST [9610] LOG:  listening on IPv6 address "::1", port 5432
+2018-01-25 13:56:25.248 CST [9610] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-01-25 13:56:25.249 CST [9610] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-01-25 13:56:25.307 CST [9611] LOG:  database system was shut down at 2018-01-16 17:33:18 CST
+2018-01-25 13:56:25.325 CST [9610] LOG:  database system is ready to accept connections
+2018-01-25 14:51:16.546 CST [11328] ERROR:  relation "votes" does not exist at character 24
+2018-01-25 14:51:16.546 CST [11328] STATEMENT:  SELECT  "votes".* FROM "votes" LIMIT $1
+2018-01-25 14:51:44.049 CST [11328] ERROR:  relation "votes" does not exist at character 566
+2018-01-25 14:51:44.049 CST [11328] STATEMENT:                SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+	                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+	                FROM pg_attribute a
+	                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	                LEFT JOIN pg_type t ON a.atttypid = t.oid
+	                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+	               WHERE a.attrelid = '"votes"'::regclass
+	                 AND a.attnum > 0 AND NOT a.attisdropped
+	               ORDER BY a.attnum
+	
+2018-01-25 14:52:13.822 CST [11328] ERROR:  relation "votes" does not exist at character 566
+2018-01-25 14:52:13.822 CST [11328] STATEMENT:                SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+	                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+	                FROM pg_attribute a
+	                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	                LEFT JOIN pg_type t ON a.atttypid = t.oid
+	                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+	               WHERE a.attrelid = '"votes"'::regclass
+	                 AND a.attnum > 0 AND NOT a.attisdropped
+	               ORDER BY a.attnum
+	
+2018-01-25 14:52:15.641 CST [11328] ERROR:  relation "votes" does not exist at character 566
+2018-01-25 14:52:15.641 CST [11328] STATEMENT:                SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+	                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+	                FROM pg_attribute a
+	                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	                LEFT JOIN pg_type t ON a.atttypid = t.oid
+	                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+	               WHERE a.attrelid = '"votes"'::regclass
+	                 AND a.attnum > 0 AND NOT a.attisdropped
+	               ORDER BY a.attnum
+	
+2018-01-25 14:52:21.995 CST [11328] ERROR:  relation "votes" does not exist at character 566
+2018-01-25 14:52:21.995 CST [11328] STATEMENT:                SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+	                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+	                FROM pg_attribute a
+	                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	                LEFT JOIN pg_type t ON a.atttypid = t.oid
+	                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+	               WHERE a.attrelid = '"votes"'::regclass
+	                 AND a.attnum > 0 AND NOT a.attisdropped
+	               ORDER BY a.attnum
+	
+2018-01-25 14:53:04.297 CST [11344] ERROR:  database "hanfu" is being accessed by other users
+2018-01-25 14:53:04.297 CST [11344] DETAIL:  There is 1 other session using the database.
+2018-01-25 14:53:04.297 CST [11344] STATEMENT:  DROP DATABASE IF EXISTS "hanfu"
+2018-01-25 14:55:48.152 CST [11367] ERROR:  database "hanfu" is being accessed by other users
+2018-01-25 14:55:48.152 CST [11367] DETAIL:  There is 1 other session using the database.
+2018-01-25 14:55:48.152 CST [11367] STATEMENT:  DROP DATABASE IF EXISTS "hanfu"
+2018-01-25 14:56:08.372 CST [11370] ERROR:  database "hanfu" already exists
+2018-01-25 14:56:08.372 CST [11370] STATEMENT:  CREATE DATABASE "hanfu" ENCODING = 'unicode'
+2018-01-25 15:04:50.355 CST [11435] ERROR:  relation "votes" does not exist at character 566
+2018-01-25 15:04:50.355 CST [11435] STATEMENT:                SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+	                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+	                FROM pg_attribute a
+	                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	                LEFT JOIN pg_type t ON a.atttypid = t.oid
+	                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+	               WHERE a.attrelid = '"votes"'::regclass
+	                 AND a.attnum > 0 AND NOT a.attisdropped
+	               ORDER BY a.attnum
+	
+2018-01-25 15:05:00.024 CST [11435] ERROR:  relation "votes" does not exist at character 566
+2018-01-25 15:05:00.024 CST [11435] STATEMENT:                SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+	                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+	                FROM pg_attribute a
+	                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	                LEFT JOIN pg_type t ON a.atttypid = t.oid
+	                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+	               WHERE a.attrelid = '"votes"'::regclass
+	                 AND a.attnum > 0 AND NOT a.attisdropped
+	               ORDER BY a.attnum
+	
+2018-01-25 15:09:54.694 CST [11480] ERROR:  relation "schema_migration" does not exist at character 15
+2018-01-25 15:09:54.694 CST [11480] STATEMENT:  select * from schema_migration;
+2018-01-25 15:10:09.714 CST [11480] ERROR:  relation "votes" does not exist at character 15
+2018-01-25 15:10:09.714 CST [11480] STATEMENT:  select * from votes;
+2018-01-25 15:10:13.883 CST [11480] ERROR:  relation "vote" does not exist at character 15
+2018-01-25 15:10:13.883 CST [11480] STATEMENT:  select * from vote;
