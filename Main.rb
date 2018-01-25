@@ -2,20 +2,30 @@
 
 
 #匯入模組
+#require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/activerecord'
-require './config/environments'
 require './models/model'
+require './config/environments'
 
 
-class Main < Sinatra::Base
+
+
+class Vote < ActiveRecord::Base
+end
+
+
+class App < Sinatra::Base
 	#處理行事曆
 	get '/calendar' do
-		erb :Main
+		erb :Calendar
 	end
 
 	#處理投票
 	get '/vote' do
+		@votes = Vote.all #find(params[:id])
+		@vote=@votes.first
+
 		erb :Vote
 	end
 
