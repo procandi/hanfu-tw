@@ -91,3 +91,7 @@
 2018-01-25 15:10:09.714 CST [11480] STATEMENT:  select * from votes;
 2018-01-25 15:10:13.883 CST [11480] ERROR:  relation "vote" does not exist at character 15
 2018-01-25 15:10:13.883 CST [11480] STATEMENT:  select * from vote;
+2018-01-26 16:30:27.747 CST [9610] LOG:  received smart shutdown request
+2018-01-26 16:30:27.753 CST [9610] LOG:  worker process: logical replication launcher (PID 9617) exited with exit code 1
+2018-01-26 16:30:27.753 CST [9612] LOG:  shutting down
+2018-01-26 16:30:27.775 CST [9610] LOG:  database system is shut down
