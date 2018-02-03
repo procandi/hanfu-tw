@@ -1,4 +1,19 @@
-<h2>Hello World</h2>
+<h2>中華漢服文化協會 領票作業</h2>
 <p>
-  The time is now: <%= Time.now %>
+  <%= form_tag :action => :result do %>
+	  <div class="field">
+		  請輸入事前登錄在工作人員處的Email：<%= text_field_tag :email, '' %><br>
+		  <br>
+		  提醒幹部同仁，票只能『領取一次』。<br>
+		  請存妥取好的票，並至Google表單上投下您保貴的意見。<br>
+		  <br>
+		  若Google表單上的投票序號重複出現，並投同一人，只計一張票。<br>
+		  若Google表單上的投票序號重複出現，並投不同人，則視為廢票。<br>
+		  <br>
+	  </div>
+
+	  <div class="actions">
+	     <%= submit_tag '確認領票' %>
+	  </div>
+  <% end %>
 </p>
