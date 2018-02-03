@@ -8,10 +8,10 @@ class WelcomeController < ApplicationController
 	def result
 		email=params[:email]
 
-		vote=Vote.all.where("email='#{email}' and flag=''")
-		if vote==nil
-			@result='您的Email已領過票，或Email錯誤或未登錄'
-		else
+		#vote=Vote.all.where("email='#{email}' and flag=''")
+		#if vote==nil
+		#	@result='您的Email已領過票，或Email錯誤或未登錄'
+		#else
 
 			if email.length()>5
 				temp=email[0..4].to_s()
@@ -43,7 +43,7 @@ class WelcomeController < ApplicationController
 			else
 				@result='您的Email已領過票，或Email錯誤或未登錄'
 			end
-		end
+		#end
 	end
 
 
