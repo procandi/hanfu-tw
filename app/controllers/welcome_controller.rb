@@ -19,26 +19,39 @@ class WelcomeController < ApplicationController
 				temp=email.to_s()
 			end
 			
-			serial=''
+			s=''
 			temp.each_byte(){|a|
-				serial+=(a.to_i()*860220).to_s()
+				s+=(a.to_i()*860220).to_s()
 			}
 
 			i=0
 			@result=''
-			serial.each_char(){|c|
+			s.each_char(){|c|
 				@result+=c
-				if(i%2==1 && i+1!=serial.length)
+				if(i%2==1 && i+1!=s.length)
 					@result+='-'
 				end
 				i+=1
 			}
 
-			@result='您的投票序號為：'+@result
+			r=Serial.all.where("number='#{s}'")
+			if r==[]
+				serial=Serial.new()
+				serial.number=@result
+				serial.save()
+				@result='您的投票序號為：'+@result
+			else
+				@result='您的Email已領過票，或Email錯誤或未登錄'
+			end
 		end
 	end
 
 
 	def check
+		s=params[:serial]
+
+		@result=Serial.all.where("number='#{s}'")
+
+
 	end
 end
