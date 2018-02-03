@@ -35,7 +35,7 @@ class WelcomeController < ApplicationController
 			}
 
 			r=Serial.all.where("number='#{s}'")
-			if r==[]
+			if r==0
 				serial=Serial.new()
 				serial.number=@result
 				serial.save()
