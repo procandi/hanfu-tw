@@ -16,4 +16,19 @@
 	     <%= submit_tag '確認領票' %>
 	  </div>
   <% end %>
+
+
+  <br><br><br><br>
+
+
+  <%= form_tag :action => :check do %>
+	  <div class="field">
+		  驗證Email：<%= text_field_tag :email, '' %><br>
+		  <br>
+	  </div>
+
+	  <div class="actions">
+	     <%= submit_tag '驗證Email' %>
+	  </div>
+  <% end %>
 </p>

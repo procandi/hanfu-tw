@@ -50,8 +50,12 @@ class WelcomeController < ApplicationController
 	def check
 		s=params[:serial]
 
-		@result=Serial.all.where("number='#{s}'")
-
+		r=Serial.all.where("number='#{s}'")
+		if r==0
+			@result='您的Email已領過票，或Email錯誤或未登錄'
+		else
+			@result='有效票'
+		end
 
 	end
 end
